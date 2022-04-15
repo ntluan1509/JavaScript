@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6.1</title>
+</head>
+<style>
+    body{
+        position: relative;
+        background-color: aliceblue;
+    }
+    #anh {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 550px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px yellow;
+    }
+</style>
+<script>
+    var out = new Image();
+    var over = new Image();
+    out.src = "img/anh1.webp";
+    over.src = "img/anh2.webp"
+
+    function fover() {
+        var anh = document.getElementById("anh");
+        anh.src = over.src;
+    }
+    function fout() {
+        var anh = document.getElementById("anh");
+        anh.src = out.src;
+    }
+</script>
+<body>
+    <img id="anh" src="img/anh1.webp" alt="" onmouseover="fover()" onmouseout="fout()">
+</body>
+</html>

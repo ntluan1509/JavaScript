@@ -1,0 +1,29 @@
+<!DOCTYPE html >
+    <html lang ="en">
+        <head>
+            <meta charset="utf-8">
+            <title>Phương trình bậc hai </title>
+        </head>
+        <body>
+            <script>
+                var ptb2 =  new Object() ;
+                ptb2.a = prompt("Hệ số a") ;
+                ptb2.b = prompt("Hệ số b") ;
+                ptb2.c = prompt("Hệ số c") ;
+                ptb2.giai = function() {
+                    delta = this.b*this.b - 4*this.a*this.c ;
+                        x1 = (-this.b + Math.sqrt(delta)) / (2*this.a) ;
+                        x2 = (-this.b - Math.sqrt(delta)) / (2*this.a) ;
+                        if( delta < 0 ) {
+                            alert("Phương trình vô nghiệm ") ;
+                        } else if( delta == 0){
+                            alert("Phương trình có nghiệm kép:" + (-this.b/(2*this.a)))
+                        } else {
+                            alert("Phương trình có hai nghiệm phân biệt :\n" + x1 +"\n" + x2 );
+                        }
+                    }
+                
+            </script>
+            <button onclick="ptb2.giai()">Giải</button>
+        </body>
+    </html>

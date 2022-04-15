@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập số thực </title>
+</head>
+<body>
+    <script>
+        var x = prompt(" Nhập vào số thực ") ;
+        if (isNaN(x) ) {
+            alert(" Số vừa nhập không hợp lệ ") ;
+            var x = prompt(" Hãy nhập lại  ") ;
+        }
+           // căn bậc hai 
+           var a = Math.sqrt(x) ;
+           document.writeln("Căn bậc hai bằng : " + a) ; 
+           // Bình phương 
+           var b = Math.pow( x,2 ) ;
+           document.writeln("Bình phương bằng : " + b) ;
+           //làm trong số
+           var c = Math.round(x) ;
+           document.writeln("Làm tròn : " + c) ;
+
+    </script>
+</body>
+</html>

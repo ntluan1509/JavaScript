@@ -1,0 +1,22 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body ng-app="">
+    <div>
+        <p>Nhập họ và tên đệm: <input type="text" ng-model="ho"></p>
+        <p>Nhập tên: <input type="text" ng-model="ten"></p>
+        <p>Nhập nhập năm sinh: <input type="text" ng-model="tuoi"></p>
+        <h1>Thông tin đã nhập là: </h1>
+        <p>họ và tên: {{ho +" " + ten}}</p>
+        <p>tuổi là: {{2022 - tuoi}}</p>
+    </div>
+</body>
+
+</html>

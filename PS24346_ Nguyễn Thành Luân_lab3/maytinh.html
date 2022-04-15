@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính</title>
+</head>
+<body>
+    <h1> Toán tử </h1>
+    <script>
+        var a = prompt("Nhập hạng tử a") ;
+        var b = prompt("Nhập hạng tử b") ;
+        var o = prompt("Nhập toán tử " + 
+        " ( + , - , * , / )") ;
+
+        switch ( o ) {
+            case  "+" :
+                var kq = Number(a) + Number(b) ;
+                alert(" Tổng là :" + kq );
+                break;
+            case  "-" :
+                var kq1 = a - b ;
+                alert(" Hiệu là :" + kq1 );
+                break;
+            case  "*" :
+                var kq2 = a * b ;
+                alert(" Tích là :" + kq2 );
+                break;
+            case  "/" :
+                var kq3 = a / b ;
+                alert(" Thương là :" + kq3 );
+                break;
+            default:
+                alert( o + "Không phải toán tử") ;
+        }
+    </script>
+</body>
+</html>

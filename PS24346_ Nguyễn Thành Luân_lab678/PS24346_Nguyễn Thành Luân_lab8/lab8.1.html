@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        var myApp = angular.module('myModule', []);
+        myApp.controller('myController', function ($scope) {
+            var employee = {
+                FirstName: "Mark",
+                LastName: "Hast",
+                Gender: "Female"
+            }
+            $scope.employee = employee;
+        })
+    </script>
+</head>
+
+<body ng-controller="myController">
+    <div>
+        First Name: <input type="text" ng-model="employee.FirstName" /><br />
+        Last Name: <input type="text" ng-model="employee.LastName" /><br />
+        Gender: <input type="text" ng-model="employee.Gender" /><br />
+        <br />
+        <br />
+        First Name: {{employee.FirstName}}<br />
+        Last Name: {{employee.LastName}}<br />
+        Gender: {{employee.Gender}}<br />
+    </div>
+</body>
+
+</html>

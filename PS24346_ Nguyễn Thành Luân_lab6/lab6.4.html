@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+    <script>
+        function Kiemform() {
+            var ho = document.getElementById('Ho').value;
+            if (ho == "") {
+                alert("Họ không được để trống")
+            }
+
+            var ten = document.getElementById('Ten').value;
+            if (ten == "") {
+                alert("Tên không được để trống")
+            }
+
+            var ns = document.getElementById('ngaysinh').value;
+            if (ns == "") {
+                alert("Hãy chọn ngày tháng năm sinh ");
+            }
+
+            var gt = document.getElementById('gender').check;
+            if( gt == "") {
+                alert("Hãy chọn giới tính")
+            }
+
+            var st = document.getElementById('hobby').check;
+            if(st == "") {
+                alert("Hãy chọn sở thích của bạn ")
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Form đăng kí</h1>
+    <hr>
+    <form onsubmit="Kiemform()">
+        <div>
+            <label >Họ </label>
+            <input id="Ho" type="text">
+        </div>
+        <div>
+            <label >Tên </label>
+            <input id="Ten" type="text">
+        </div>
+        <div>
+            <label> Ngày sinh </label>
+            <input id="ngaysinh" type="date">
+        </div>
+        <div>
+            <label >Giới tính</label>
+            <input type="radio" name="gioitinh" id="gender"> Nam
+            <input type="radio" name="gioitinh" id="gender"> Nữ
+        </div>
+        <div>
+            <label> Sở thích</label>
+            <input type="checkbox" id="hobby"> Đọc sách
+            <input type="checkbox" id="hobby"> Xem phim
+            <input type="checkbox" id="hobby"> Nghe nhạc
+            <input type="checkbox" id="hobby"> Bóng đá
+            <input type="checkbox" id="hobby"> May vá
+        </div>
+        <button>Đăng kí</button>
+    </form>
+</body>
+</html>

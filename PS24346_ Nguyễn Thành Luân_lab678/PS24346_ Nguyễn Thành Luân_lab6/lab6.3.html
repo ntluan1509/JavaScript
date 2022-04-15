@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6.3</title>
+    <script src="lab6.3.js"></script>
+    <style>
+        div {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ĐẶT HÀNG</h1>
+    <div>
+        <form onsubmit= " kiem_tra()">
+            <div>
+                <label >Sản phẩm</label>
+                <input type="text" id="san_pham"> 
+            </div>
+            <div>
+                <label >Loại sản phẩm</label>
+                <select name="loai" id="tenloai">
+                    <option value="1">Hàng thật</option>
+                    <option value="2">Hàng nhái</option>
+                </select>
+            </div>
+             <div>
+                <label>Đơn giá</label>
+                <input id="don_gia" type="text">
+             </div>
+             <div>
+                 <label>Nơi nhận hàng</label>
+                 <input name="noinhanhang" type="radio" value="noithanh" onclick="giavanchuyen(this);"> Nội thành
+                 <input name="noinhanhang" type="radio" value="ngoaithanh" onclick="giavanchuyen(this);"> Ngoại thành
+             </div>
+             <label id="gia">Giá : </label>
+                <hr>
+                <button>Đặt mua</button>
+        </form>
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng kí thành viên </title>
+    <style>
+        body {
+            position: relative;
+            background-color:aliceblue;
+        }
+        .thung {
+            position: absolute;
+            margin: auto;
+            top: 700px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border: 1px solid black;
+            width: 450px;
+            height: 500px;
+            border-radius: 20px;
+            background-image: url(https://img5.thuthuatphanmem.vn/uploads/2021/11/09/hinh-nen-con-ho-tim-cho-dien-thoai_080912857.jpg);
+            background-size: 100% 100%;
+        }
+        form {
+            margin: 20px 40px  ;
+            color: white;
+            font-size: large;
+        }
+        input {
+            margin-bottom: 15px;
+            height: 20px;
+        }
+        button {
+            margin-top: 10px;
+            width: 100px;
+            height: 50px;
+            border-radius: 20px;
+            box-shadow: inset 0 0 20px blue;
+        }
+        button:hover {
+            color: white;
+            box-shadow: inset 0 0 30px red;
+        }
+    </style>
+    <script>
+        function kiemtra() {
+        var masv = document.getElementById("masv").value;
+        if(masv == "" ) {
+            alert("Mã sinh viên không để trống")
+        }
+
+        var hoTen = document.getElementById("hovaten").value;
+        if(hoTen == "" ) {
+            alert("Họ và tên không được để trống ")
+        }
+        if(isNaN(hoTen) == false) {
+            alert("Họ tên phải là chữ")
+        }
+
+        var gt = document.getElementById("gender").checked;
+        if(gt == false ) {
+            alert("Giới tính phải được chọn ")
+        }
+
+        var st = document.getElementById("hobby").checked;
+        if( st == false) {
+            alert("Sở thích phải được chọn ")
+        }
+
+        var quoctich = document.getElementById("nationaly").value;
+        if(quoctich != 1 , 2, 3 ) {
+            alert("Hãy chọn quốc tịch")
+        }
+
+        var ghichu = document.getElementById("note").value;
+        if(ghichu.length > 200) {
+            alert("Ghi chú phải nhỏ hơn 200 kí tự")
+        } 
+    }
+    </script>
+</head>
+<body>
+    <h1 align="center">ĐĂNG KÍ THÀNH VIÊN</h1>
+    <hr>
+    <div class="thung">
+        <form action="" onsubmit="kiemtra()">
+            Mã sinh viên <br>
+            <input type="text" id="masv"> <br>
+             Họ và tên <br>
+             <input type="text" id="hovaten"> <br> 
+             Giới tính <br>
+             <input type="radio" name="gioitinh" value="Nam" id="gender"> Nam 
+             <input type="radio" name="gioitinh" value="Nữ" id="gender"> Nữ <br>
+             Sở thích <br>
+             <input type="checkbox" name="love" id="hobby"> Đọc sách 
+             <input type="checkbox" name="love" id="hobby"> Du lịch
+             <input type="checkbox" name="love" id="hobby"> Âm nhạc
+             <input type="checkbox" name="love" id="hobby"> Ẩm thực <br>
+             Quốc tịch <br>
+             <select placeholder="Chọn quốc tịch" id="nationaly">
+                <option ></option>
+                 <option value="1">Việt nam</option>
+                 <option value="2">Mỹ</option>
+                 <option value="3">Anh</option>
+             </select> <br> <br>
+             Ghi chú <br>
+             <textarea name="" id="note" cols="30" rows="5"></textarea> <br>
+             <button>Đăng kí</button>
+        </form>
+    </div>
+</body>
+</html>

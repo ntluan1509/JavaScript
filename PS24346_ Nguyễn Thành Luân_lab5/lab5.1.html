@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bán hàng</title>
+    <script>
+        function display() {
+            var a = document.getElementById("pro")
+            var name = a.innerText;
+            var b = a.getAttribute("price");
+            var c = document.getElementById("qty").value;
+            var amount = b * c;
+            document.getElementById("name").innerText = name;
+            document.getElementById("amount").innerText = amount;
+
+        }
+    </script>
+</head>
+<body>
+    <label id="pro" price="1950">iPhone 9</label>
+    <input id="qty" type="number" placeholder="Số lượng ...."/>
+    <button onclick="display()">OK</button>
+    <hr />
+    <h3>Name: <span id="name">?</span></h3>
+    <h3>Amount: <span id="amount">?</span></h3>
+</body>
+</html>

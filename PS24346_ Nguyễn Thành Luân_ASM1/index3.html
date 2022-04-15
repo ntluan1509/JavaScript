@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bán hàng</title>
+    <style>
+        * {
+            text-align: center;
+            position: relative;
+        }
+        table {
+            position: absolute;
+            margin: 0 auto;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            top: 150px;
+            width: 700px;
+            height: 400px;
+            background-image: url(https://imgt.taimienphi.vn/cf/Images/np/2022/1/11/hinh-nen-mat-trang-dep-9.jpg);
+            color: white;
+            border-radius: 15px;
+            background-color: aliceblue;
+            font-weight: bold;
+        }   
+        .dam {
+            font-weight: bold;
+        }
+        .text  {
+            width: 250px;
+        }
+        .text > input {
+            width: 230px;
+            height: 20px;
+        }
+    </style>
+    <script>
+        function doigia() {
+            var arrGia = document.getElementById("gia");
+            var obj = document.getElementById("BH");
+            var muc = obj.value;
+            for( var i = 0; i < arrGia.length ; i++) {
+                 var gia = parseFloat(arrGia[i].innerText);
+                if ( gia < muc || muc == -1) {
+                    arrGia[i].parentNode.style.display = "";
+                } else {
+                    arrGia[i].parentNode.style.display = "none";
+                }
+            }
+        }
+        function tich1(i) {
+            var arrSL = document.getElementById("soluong");
+            arrSL[i].disabled = !arrSL[i].disabled;
+        }
+        function thanhtien(obj) {
+            var soluong = obj.value;
+            var gia = obj.parentNode.previousElementSibling.innerText;
+            obj.parentNode.nextElementSibling.innerText= soluong * gia;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>BÁN HÀNG</h1>
+    <select name="banhang" id="BH" onchange="doigia()">
+        <option value="-1">Mức giá</option> 
+        <option value="500">500</option>
+        <option value="1000">1000</option>
+    </select>
+    <hr>
+    
+        <table border="1">
+            <tr class="dam">
+                <td><input type="checkbox"></td>
+                <td>Hàng hóa </td>
+                <td>Đơn giá </td>
+                <td>Số lượng</td>
+                <td>Thành tiền</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="check" onclick="tich1(0)"></td>
+                <td>Iphone 9</td>
+                <td id="gia">700</td>
+                <td class="text"><input  onkeyup="thanhtien(this)" type="text" id="soluong" ></td>
+                <td id="thanhtien"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="check" onclick="tich1(1)"></td>
+                <td>Samsung </td>
+                <td id="gia">400</td>
+                <td class="text"><input onkeyup="thanhtien(this)" type="text" id="soluong" ></td>
+                <td id="thanhtien">400</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="check" onclick="tich1(2)"></td>
+                <td>Nokia</td>
+                <td id="gia">100</td>
+                <td class="text"><input onkeyup="thanhtien(this)" type="text" id="soluong"></td>
+                <td id="thanhtien"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="check" onclick="tich1(3)"></td>
+                <td>Sony Xperia</td>
+                <td id="gia">450</td>
+                <td class="text"><input onkeyup="thanhtien(this)" type="text" id="soluong"></td>
+                <td id="thanhtien"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="check" onclick="tich1(4)"></td>
+                <td>Motorola</td>
+                <td id="gia">180</td>
+                <td class="text"><input onkeyup="thanhtien(this)" type="text" id="soluong"></td>
+                <td id="thanhtien"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="check" onclick="tich1(5)"></td>
+                <td>Oppo</td>
+                <td id="gia">600</td>
+                <td class="text"><input onkeyup="thanhtien(this)" type="text" id="soluong"></td>
+                <td id="thanhtien"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="check" onclick="tich1(6)"></td>
+                <td>Bphone</td>
+                <td id="gia">90</td>
+                <td class="text"><input onkeyup="thanhtien(this)" type="text" id="soluong"></td>
+                <td id="thanhtien">180</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td colspan="3">Tổng</td>
+                <td id="tong">580</td>
+            </tr>
+        </table>
+    
+
+</body>
+</html>

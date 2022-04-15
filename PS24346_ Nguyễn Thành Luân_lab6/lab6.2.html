@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6.2</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 150px;
+        }
+        button {
+            width: 70px;
+            height: 40px;
+            margin: 5px;
+            border-radius: 15px;
+        }
+        img {
+            width: 500px;
+            height: 350px;
+        }
+    </style>
+    <script>
+        var img = [];
+        for( var i = 0 ; i <6 ; i++) {
+            img[i] = new Image();
+            img[i].src = "img/" + i + ".JPG";
+        }
+        var index = 0;
+        function First() {
+            index = 0;
+            var anh = document.getElementById("anh");
+            anh.src = img[index].src;
+        }
+        function Last() {
+            index = img.length - 1;
+            var anh = document.getElementById("anh");
+            anh.src = img[index].src;
+        }
+        function Next() {
+            index++;
+            var anh = document.getElementById("anh");
+            anh.src = img[index].src;
+        }
+        function Prev() {
+            index--;
+            var anh = document.getElementById("anh");
+            anh.src = img[index].src;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+    <img id="anh" src="img/anh1.jpg" alt=""> <br>
+    <button onclick="First()">First</button> 
+    <button onclick="Next()">Prev</button>
+    <button onclick="Prev()">Next</button>
+    <button onclick="Last()">Last</button>
+    </div>
+</body>
+</html>

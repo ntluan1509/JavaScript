@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3 Lab 3</title>
+</head>
+<body>
+    <Script>
+        document.write(" <h1> GAME <h1>") ;
+             var soBiMat = Math.round(Math.random()*100) ;
+             while(true) {
+                 var nhap = prompt("Nhập số muốn đoán (1 -> 100)") ;
+                 if(soBiMat == nhap ) {
+                     alert("Bạn đã nhập đúng") ;
+                     break ;
+                 } else if( soBiMat < nhap ) {
+                     alert("Rất tiếc ! Số bí mật nhỏ hơn số bạn đoán") ;
+                 } else {
+                    alert("Rất tiếc ! Số bí mật lớn hơn số bạn đoán") ;
+                 }
+             }
+    </Script>
+</body>
+</html>

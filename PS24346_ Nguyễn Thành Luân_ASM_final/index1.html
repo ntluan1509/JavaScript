@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bộ sưu tập ảnh</title>
+        <style>
+            body {
+                background-image: url(https://img5.thuthuatphanmem.vn/uploads/2021/11/09/anh-nen-mau-tim-cho-may-tinh_080911213.jpg);
+                background-size: 100% 100%;
+            
+                
+            }
+            .container {
+                 text-align: center;
+                 margin-top: 150px;
+            }
+            img {
+                position:relative;
+                top: 130px;
+                width: 500px;
+                height: 350px;
+                border-radius: 20px;
+            }
+            button {
+                margin: 0px 15px 0px 15px;
+                width: 70px;
+                height: 70px;
+                border-radius: 30px;
+            }
+            button:hover {
+                color: white;
+                background-color: lightgreen;
+            }
+        </style>
+
+        <script>
+            var anh = [];
+            for( var i = 0 ; i < 3 ; i++) {
+            anh[i] = new Image();
+            anh[i].src = "img/" + i + ".JPG";
+        }
+            var index = 0;
+            function next() {
+            index++;
+            if(index >= anh.length){
+                index = 0 ;
+            }
+            var hinh = document.getElementById("hoa");
+            hinh.src = anh[index].src;
+        }
+        function back() {
+            index--;
+            if( index < 0 ) {
+                index = anh.length - 1;
+            }
+            var hinh = document.getElementById("hoa");
+            hinh.src = anh[index].src;
+        }
+    
+        
+        </script>
+    </head>
+    <body onload="loadAnh()">
+        <div class="container" >
+            <button onclick="back()">PREV</button>
+            <img id="hoa" src="img/0.jpg" alt="hình chó mèo">
+            <button onclick="next()">NEXT</button>
+        </div>
+       
+    </body>
+</html>

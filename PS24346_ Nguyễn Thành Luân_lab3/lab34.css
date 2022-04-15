@@ -1,0 +1,17 @@
+.css {
+    text-align: center;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+.css > button {
+    font-size: 20px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    width: 70px;
+    height: 70px;
+    margin: 2px;  
+}
+.css > button:hover{
+   background-color: lightblue;
+   color: white;
+}
